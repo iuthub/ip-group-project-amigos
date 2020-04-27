@@ -16,6 +16,4 @@
 	<a class="nav-link" href="#"><p class="black_text">SIGN IN</p></a>
 	<a class="nav-link" href="#"><p class="black_text">LOCATION</p></a>
 	<a class="nav-link" href="#"><p class="black_text">OUR STORY</p></a>
-
-
 </nav>
