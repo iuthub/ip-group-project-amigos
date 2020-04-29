@@ -4,9 +4,15 @@
 		<meta name="viewport" content="width=device-width,initial scale=1.0">
 		<title>Contact Amigos</title>
 		<link rel="stylesheet" type="text/css" href="css/contact.css">
+		<link rel="stylesheet" href="{{ URL::to('css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ URL::to('css/bootstrap-grid.css') }}">
+	<link rel="stylesheet" href="{{ URL::to('css/bootstrap-reboot.css') }}">
+	<link rel="stylesheet" href="{{ URL::to('css/mystyles.css') }}">
+	<script src="{{ URL::to('js/slideshow.js') }}" defer></script>
 	</head>
 	<body>
-		<h1>CONTACT AMIGOS </h1>
+		@include('partials.navbar')
+		<h1><b>CONTACT AMIGOS</b> </h1>
 
 <div class="container">
   <form method="post" action="{{route('contact.store')}}">
@@ -20,12 +26,12 @@
     <input type="email" id="e-mail" name="email" placeholder="amigos@gmail.com">
 
     <label for="feedback">Leave your comment</label>
-    <textarea id="subject" name="feedback" placeholder="I am writing about" style="height:200px"></textarea>
+    <textarea id="subject" name="feedback" placeholder="I am writing about..." style="height:200px"></textarea>
 
     <input type="submit" value="Submit">
   </form>
 </div>
-
+@include('partials.footer')
 
 	</body>
 </html>
