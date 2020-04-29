@@ -16,9 +16,14 @@ Route::get('/', function(){
     return view('main.index');
 })->name('mainIndex');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('mainIndex');
+Route::get('/contact',[
+	'uses'=>'ContactUsController@create']);
+
+Route::post('/contact',[
+	'uses'=>'ContactUsController@store',
+	'as'=>'contact.store']);
+
+
 
 Auth::routes();
 
