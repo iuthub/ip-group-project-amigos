@@ -3,7 +3,7 @@
 		<a class="nav-link" href="/"><p class="restourant_name">AMIGOS</p></a>
 		<a class="nav-link" href="#"><p>FOOD & DRINK</p></a>
 		<a class="nav-link" href="#"><p>MAKE ORDER</p></a>
-		<a class="nav-link" href="#"><p>CONTACT US</p></a>
+		<a class="nav-link" href="/contact"><p>CONTACT US</p></a>
 		@guest
 		<a class="nav-link" href="/login"><p>SIGN IN</p></a>
 		<a class="nav-link" href="/register"><p>REGISTER</p></a>
