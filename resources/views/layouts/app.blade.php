@@ -19,6 +19,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/mystyles.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::to('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ URL::to('css/bootstrap-grid.css') }}">
+    <link rel="stylesheet" href="{{ URL::to('css/bootstrap-reboot.css') }}">
 </head>
 <body>
     <div id="app">
