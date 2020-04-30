@@ -5,7 +5,6 @@
 	  color: #000;
 }
 
-
 .description>p{
 	font-family: Courier New;
 }
@@ -18,10 +17,19 @@
 .restourant_name{
 	color: #bb192e;
 }
+.welcoming{
+	text-align:center; 
+	width: 100%;
+	font-size: 50px;
+	font-family: Times New Roman; 
+}
+.settings{
+	color: #bb192e;
+}
 .subtitle{
 	text-align:center; 
 	width: 100%;;
-	font-size: 80px;
+	font-size: 75px;
 }
 .subtitle>p{
 	font-family: Times New Roman; 
@@ -41,12 +49,28 @@
 hr{
 	 border: 1px solid #bda17e;
 }
+.image{
+	width: 120%;
+	height: 120%;
+	padding:0px;
+	margin:0px;
+	display: inline;
+}
+.image2{
+	width: 30%;
+	height: 30%;
+	padding:0px;
+	margin:0px;
+	display: inline;
+}
+
+
 .icon-car img{
     height: 40px;
     width: 40px;
 }
 .navbar .nav-link{
-	font-family: 'Luckiest Guy', cursive;
+	font-family: Helvetica;
 }
 .navbar .nav-link:hover{
 	
@@ -54,6 +78,25 @@ hr{
 	color: #E44C39;
 	transform: rotate(-2deg) translateX(3px) scale(1.1);
 }
+
+.form-container{
+	max-width: 40%;
+	align-items: center;
+	padding-right: 15px;
+  	padding-left: 15px;
+  	margin-right: auto;
+  	margin-left: auto;
+
+}
+
+/*.form-control:focus {
+        border-color: #28a745;
+        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+    } */
+
+
+
+
 /* #app .navbar{
 	border-bottom: 2px solid #E44C39;
 }
