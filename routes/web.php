@@ -24,7 +24,6 @@ Route::post('/contact',[
 	'as'=>'contact.store']);
 
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
