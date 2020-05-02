@@ -27,8 +27,10 @@
 	@endif
   <form method="post" name="ContactForm" action="{{route('contact.store')}}">
   	@csrf
-    <label for="firstName">First Name</label>
-    <input type="text" pattern="^[a-z]{2,20}" title="Name.." name="firstname" placeholder="John">
+	<label for="firstName">First Name</label>
+	{{-- pattern="^[a-z]{2,20}" --}}
+	
+    <input type="text"  title="Name.." name="firstname" placeholder="John">
     @if ($errors->has('firstname'))
     <small class="form-text invalid-feedback">{{ $errors->first('firstname') }}</small>
     @endif

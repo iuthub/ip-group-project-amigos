@@ -88,6 +88,7 @@ hr{
   	margin-left: auto;
 
 }
+<<<<<<< HEAD
 
 
 /* Menu styling */
@@ -204,8 +205,9 @@ hr{
 	margin-top: 50px;
 	color: white;
 	font-size: 2rem;
+=======
+a p{
+	margin: 0;
+>>>>>>> 47a2c45675502cd347123ab6d2b1c49dc8ee0c7b
 }
-.center h1{
-	color: #FF9800;
-} */
 

@@ -8,15 +8,15 @@
 		<a class="nav-link" href="/login"><p>SIGN IN</p></a>
 		<a class="nav-link" href="/register"><p>REGISTER</p></a>
 		@else
-					<a class="nav-link" href="{{ route('logout') }}"
-						onclick="event.preventDefault();
-										document.getElementById('logout-form').submit();">
-						{{ __('Logout') }}
-					</a>
+			<a class="nav-link" href="{{ route('logout') }}"
+				onclick="event.preventDefault();
+								document.getElementById('logout-form').submit();">
+				<p>LOGOUT</p>
+			</a>
 
-					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-						@csrf
-					</form>
+			<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+				@csrf
+			</form>
 		@endguest
 	</div>	
 </nav>
