@@ -2,7 +2,7 @@
 @section('content')
 <div class="form-container">
     <br><br><br><br>
-    <div class="welcoming">
+    <div class="title">
         <p class="restourant_name">WELCOME TO AMIGOS</p>
     </div>
     <form method="POST" action="{{ route('login') }}">
