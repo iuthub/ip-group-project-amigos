@@ -22,12 +22,14 @@ Route::get('/contact',[
 Route::post('/contact',[
 	'uses'=>'ContactUsController@store',
 	'as'=>'contact.store']);
-Route::get('/menu',function(){
-	return view('menu.menu');
-})->name('menuMenu');
+
+Route::get('/menu', [
+	'uses' => 'LunchMenusController@getUserLunch',
+	'as' => 'getMenu'
+]);
 
 Route::get('admin/menu', [
-	'uses' => 'LunchMenusController@getLunch',
+	'uses' => 'LunchMenusController@getAdminLunch',
 	'as' => 'adminGetMenu'
 ]);
 

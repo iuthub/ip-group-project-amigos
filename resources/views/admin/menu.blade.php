@@ -21,20 +21,20 @@
 	<div class="lunch">
 		<div class="lunch-box">
 			<table>
+				<th colspan="2">LUNCH</th>
 				@foreach($lunches as $lunch)
 				<tr>
-					<td>
+					<td class="left_col">
 						{{$lunch ->lunch_name}}
 					</td>
-					<td>
-						{{$lunch ->lunch_price}}
+					<td class="right_col">
+						$ {{$lunch ->lunch_price}}
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2">
+					<td class="descr" colspan="2">
 						{{$lunch ->lunch_description}}
 					</td>
-
 				</tr>
 				@endforeach
 				

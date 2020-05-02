@@ -8,11 +8,17 @@ use App\MenuLunch;
 
 class LunchMenusController extends Controller
 { 
-	public function getLunch(){
+	public function getAdminLunch(){
 		return view('admin.menu',[
 			'lunches' => MenuLunch::all()
 		]);
 	}
+
+    public function getUserLunch(){
+        return view('menu.menu',[
+            'lunches' => MenuLunch::all()
+        ]);
+    }
 
     public function postCreateLunch(Request $req) {
         $lunch = new MenuLunch([

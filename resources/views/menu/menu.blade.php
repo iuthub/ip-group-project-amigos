@@ -21,19 +21,23 @@
 	<div class="lunch">
 		<div class="lunch-box">
 			<table>
+				<th colspan="2">LUNCH</th>
+				@foreach($lunches as $lunch)
 				<tr>
-					<td>
-						<input type="text" name="lunch_name" form="postForm" placeholder=" lunch name">
+					<td class="left_col">
+						{{$lunch ->lunch_name}}
 					</td>
-					<td>
-						<input type="text" name="lunch_price" form="postForm" placeholder="price">
+					<td class="right_col">
+						$ {{$lunch ->lunch_price}}
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2">
-						<input type="text" name="lunch_description" form="postForm" placeholder="description">
+					<td class="descr" colspan="2">
+						{{$lunch ->lunch_description}}
 					</td>
 				</tr>
+				@endforeach
+				
 			</table>
 		</div>
 		<div class="lunch-image">

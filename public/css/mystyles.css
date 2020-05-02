@@ -88,7 +88,7 @@ hr{
   	margin-left: auto;
 
 }
-<<<<<<< HEAD
+/*<<<<<<< HEAD*/
 
 
 /* Menu styling */
@@ -124,22 +124,118 @@ hr{
 }*/
 
 .lunch-box {
-  position: center;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  word-wrap: break-word;
-  width: 60%;
-  background-clip: border-box;
+  	position: center;
+  	display: -ms-flexbox;
+  	display: flex;
+  	-ms-flex-direction: column;
+  	flex-direction: column;
+  	word-wrap: break-word;
+  	width: 60%;
+/*  	background-clip: border-box;*/
     min-height: 800px;
     margin: auto;
     background:  #3b444d;
     padding: 20px;
 }
 
+table{
+font-family: Times New Roman;
+	color: white;
+}
+.left_col{
+	text-align: left;
+	font-size: 25px;
+	width:80%;
+	
+}
+.right_col{
+	text-align: right;
+	font-size: 25px;
+	width:20%;
+}
+.descr{
+	font-size: 14px;
+	border-bottom: 2px dashed #fff
+}
+th{
+	font-size: 30px;
+	text-align: center;
+}
+td>input {
+	height: 25px;
+	font-size: 20px;
+}
+/*.left_col-edit{
+	text-align: left;
+	width:80%;
+	
+}
+.right_col-edit{
+	text-align: right;
+	width: 20%;
+}*/
+.add_menu{
+	margin-top:20px;
+	display: flex;
+	flex-direction: row;
+	max-width:100%;
+	justify-content: space-between;
+}
+.add_menu>input{
+	border-top: none;
+	border-bottom: 2px solid green;
+	background: red;
+}
 
+.left_col-edit>input{
+	width: 200%;
+	border: none;
+	border-bottom: 2px solid grey;
+	background: #3b444d;
+	color: #fff;
+	border-radius: 3px;
+	padding: 3px;
+}
 
+.right_col-edit > input{
+	width:75px;
+	border: none;
+	border-bottom: 2px solid grey;
+	background: #3b444d;
+	color: #fff;
+	border-radius: 3px;
+	text-align: right;
+	padding: 3px;
+}
+
+.ingridients>input{
+	width: 300%;
+	border: none;
+	border-bottom: 2px solid grey;
+	background: #3b444d;
+	color: #fff;
+	border-radius: 3px;
+	text-align: right;
+	text-align: left;
+	padding: 3px;
+}
+
+.addbtn{
+	border-radius: 5px;
+}
+/*input[type="text"] {
+   border: 1px solid #cccccc; //цвет рамки
+   border-radius: 3px; //закругление углов (общее)
+   -webkit-border-radius: 3px; //закругление углов (Google Chrome)
+   -moz-border-radius: 3px; //закругление углов (FireFox)
+   -khtml-border-radius: 3px; //закругление углов (Safari)
+   background: #ffffff !important; // желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым
+   outline: none; // удаляет обводку в браузерах хром(желтая) и сафари(синяя)
+  /* height: 24px; // высота на свое усмотрение
+   width: 120px;*/ // ширина на свое усмотрение
+   /*color: #cccccc; //цвет шрифта в обычном состоянии
+   font-size: 11px; // Размер шрифта
+   font-family: Tahoma; // Стиль шрифта*/
 
 
 
