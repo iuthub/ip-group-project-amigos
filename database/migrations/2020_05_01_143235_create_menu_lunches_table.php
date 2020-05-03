@@ -19,6 +19,7 @@ class CreateMenuLunchesTable extends Migration
             $table->string('lunch_name', 100);
             $table->float('lunch_price');
             $table->string('lunch_description', 500);
+            $table->unsignedBigInteger('category_id');
         });
     }
 

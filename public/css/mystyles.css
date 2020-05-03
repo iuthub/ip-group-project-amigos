@@ -223,6 +223,9 @@ td>input {
 .addbtn{
 	border-radius: 5px;
 }
+.form-login{
+	margin-bottom: 100px;
+}
 /*input[type="text"] {
    border: 1px solid #cccccc; //цвет рамки
    border-radius: 3px; //закругление углов (общее)
