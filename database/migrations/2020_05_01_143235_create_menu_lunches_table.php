@@ -16,9 +16,10 @@ class CreateMenuLunchesTable extends Migration
         Schema::create('menu_lunches', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('lunch_name', 100);
-            $table->float('lunch_price');
-            $table->string('lunch_description', 500);
+            $table->string('food_name', 100);
+            $table->float('food_price');
+            $table->string('food_description', 500);
+            $table->string('food_image')->nullable();
             $table->unsignedBigInteger('category_id');
         });
     }

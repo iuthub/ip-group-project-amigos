@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MenuLunch extends Model
 {
-    protected $fillable = ['lunch_name', 'lunch_price', 'lunch_description'];
+    protected $fillable = ['food_name', 'food_price', 'food_description', 'food_image', 'category_id'];
 
     public function category()
     {
