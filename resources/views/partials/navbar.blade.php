@@ -1,7 +1,25 @@
+{{-- <?php
+
+		if(auth()->user()->isAdmin())
+		$href ?? '' = "{{ route('adminGetMenu') }}";
+	
+		else 
+		$href ?? '' = "{{route('/')}}";
+		
+?> --}}
+
+{{-- <?php if ($user->type == 'admin')
+		$href ?? '' = "{{route('adminGetMenu')}}";
+		else
+		$href ?? '' = "{{route('/')}}";
+?> --}}
+
+{{-- {{auth()->user()->isAdmin()}} ? {{$href = route('adminGetMenu')}} : {{$href  = route('menuMenu')}}   --}}
+
 <nav class="navbar navbar-dark bg-dark">
 	<div class="container">
 		<a class="nav-link" href="/"><p class="restourant_name">AMIGOS</p></a>
-		<a class="nav-link" href="#"><p>FOOD & DRINK</p></a>
+		<a class="nav-link" href="{{(!auth()->check() || !auth()->user()->isAdmin()) ?  route('getMenu') : route('adminGetMenu')}}   {{-- {{$href}} --}}{{-- {{auth()->user()->isAdmin()}} ? {{route('adminGetMenu')}} : {{route('menuMenu')}}   --}}"><p>FOOD & DRINK</p></a>
 		<a class="nav-link" href="#"><p>MAKE ORDER</p></a>
 		<a class="nav-link" href="/contact"><p>CONTACT US</p></a>
 		@guest

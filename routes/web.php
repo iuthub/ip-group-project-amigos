@@ -23,6 +23,21 @@ Route::post('/contact',[
 	'uses'=>'ContactUsController@store',
 	'as'=>'contact.store']);
 
+Route::get('/menu', [
+	'uses' => 'LunchMenusController@getUserLunch',
+	'as' => 'getMenu'
+]);
+
+Route::get('admin/menu', [
+	'uses' => 'LunchMenusController@getAdminLunch',
+	'as' => 'adminGetMenu'
+]);
+
+Route::post('/admin/edit_menu',[
+	'uses'=>'LunchMenusController@postCreateLunch',
+	'as' => 'adminCreateLunch'
+]);
+
 
 Auth::routes();
 
