@@ -41,6 +41,7 @@
 			</table>
 			@include('admin.edit_menu')
 		</div>
+
 		<div class="lunch-image">
 			<img src="images/menu/plantains.jpg" alt="">
 		</div>

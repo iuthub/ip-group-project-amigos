@@ -42,3 +42,9 @@ Route::post('/admin/edit_menu',[
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+//cateogry Controllers
+Route::get('/admin/category/createCategory', 'CategoryController@create')->name('createCategory');
+Route::post('/admin/category/store', 'CategoryController@store')->name('storeCategory');
