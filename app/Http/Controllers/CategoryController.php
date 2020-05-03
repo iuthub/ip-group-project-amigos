@@ -10,7 +10,7 @@ class CategoryController extends Controller
     
     public function create()
     {
-        
+        return view('admin/category/createCategory');
     }
 
     
@@ -18,7 +18,11 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        
+      $validated = $request ->validate([
+      	'categoryName' => 'required|min:5'
+      ]);
+      Category::create($validated);
+      return view('main.index')->with('msg', 'Category has been created successfully');
     }
 
     
