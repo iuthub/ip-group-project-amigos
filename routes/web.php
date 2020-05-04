@@ -43,5 +43,9 @@ Route::get('/admin', 'HomeController@index');
 
 
 //Cateogry Controllers
-Route::post('/admin/category/store', 'CategoryController@store')->name('storeCategory');
+Route::get('/admin/category/allCategories', 'CategoryController@index')->name('allCategories');
 Route::get('/admin/category/createCategory', 'CategoryController@create')->name('createCategory');
+Route::post('/admin/category/store', 'CategoryController@store')->name('storeCategory');
+Route::get('/admin/category/{id}/edit','CategoryController@edit')->name('editCategory');
+Route::post('admin/category/{id}/update', 'CategoryController@update')->name('updateCategory');
+Route::get('/admin/category/{id}/delete', 'CategoryController@delete')->name('deleteCategory');
