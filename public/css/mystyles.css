@@ -226,6 +226,28 @@ td>input {
 .form-login{
 	margin-bottom: 100px;
 }
+
+.deleteBtn{
+	transition: .3s ease;
+
+	color: rgb(255, 49, 49);
+}
+.deleteBtn:hover{
+	transition: .3s ease;
+	color: rgb(255, 49, 49);
+	transform: scale(1.1);
+}
+.editBtn{
+	transition: .3s ease;
+	color: rgb(59, 58, 58);
+}
+.editBtn:hover{
+	transition: .3s ease;
+	color: rgb(59, 58, 58);
+	transform: scale(1.1);
+
+}
+
 /*input[type="text"] {
    border: 1px solid #cccccc; //цвет рамки
    border-radius: 3px; //закругление углов (общее)
