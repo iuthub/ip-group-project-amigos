@@ -18,10 +18,10 @@
 			<p>mouthwatering Latin flavors in a casual-chic setting.</p>
 		</div>
 	</div>
-	<div class="lunch">
+	{{-- <div class="lunch">
 		<div class="lunch-box">
 			<table>
-				<th colspan="2">LUNCH</th>
+				<th colspan="2">Food</th>
 				@foreach($lunches as $lunch)
 				<tr>
 					<td class="left_col">
@@ -42,8 +42,15 @@
 		</div>
 		<div class="lunch-image">
 			<img src="images/menu/plantains.jpg" alt="">
+		</div> --}}
+		<hr>
+	<div class="row">
+		@foreach ($menues as $menu)
+		<div class="col-md-3 col-xl-3 mr-2">
+			@include('partials.item')
 		</div>
-		
+		@endforeach
+	</div>
 	</div>
 </div>
 
