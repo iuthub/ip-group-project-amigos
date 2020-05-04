@@ -29,7 +29,7 @@ class CategoryController extends Controller
     Category::create($validated);
 
     return redirect()
-              ->route('createCategory')
+              ->route('allCategories')
               ->with('msg', 'Category has been created successfully');
   }
 
@@ -50,7 +50,8 @@ class CategoryController extends Controller
     
     $category->update($validated);
 
-    return view('main.index')
+    return redirect()
+          ->route('allCategories')
           ->with('msg', 'Category has been updated successfully');
 
   }

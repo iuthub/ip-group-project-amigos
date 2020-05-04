@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 <div class="container">
-	<form style="margin: 100px" method="POST" action="{{route('storeCategory') }}">
+	<form style="margin:100px;" method="POST" action="{{route('storeCategory') }}">
 		@csrf
 		<h3 class="text-center mb-5">Create Category</h3>
 		<div class="form-group">

@@ -5,9 +5,9 @@
     @csrf
     <h3 class="text-center mb-5">Edit Category</h3>
     <div class="from-group">
-      <input value="{{ $category->categoryName }}" type="text" placeholder="Category name" name="categoryName" class="from-control">
+      <input value="{{ $category->categoryName }}" type="text" placeholder="Category name" name="categoryName" class="form-control">
     </div>
-    <div class="from-group">
+    <div class="from-group mt-2">
       <button class="btn btn-primary" type="submit">Update</button>
     </div>
   </form>

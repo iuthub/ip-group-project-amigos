@@ -7,7 +7,7 @@
 		@if(auth()->check() && auth()->user()->isAdmin())
 			<a class="nav-link"
 				href="{{ route('adminGetMenu') }}">
-				<p>CREATE MENU</p>
+				<p>MENU</p>
 			</a>
 			<a class="nav-link" href="#">
 				<p>ORDERS</p>
@@ -50,3 +50,4 @@
 		@endguest
 	</div>	
 </nav>
+@include('partials.message')
