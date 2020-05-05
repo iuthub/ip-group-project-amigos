@@ -102,7 +102,7 @@ class LunchMenusController extends Controller
         //Validate input from user
         $validated = $request->validate([
             'food_name' => 'required',
-            'food_description' => 'required|min:8',
+            'food_description' => 'required|min:7',
             'food_price' => 'required',
             'category_id' => 'required',
             'food_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -110,8 +110,9 @@ class LunchMenusController extends Controller
 
         if(\File::exists($request->food_image))
         {
-            //If there is a new image delete the old one
-            unlink('food_image/' .$menu->food_image);
+            if(\File::exists('food_image/' .$menu->food_image))
+                //If there is a new image delete the old one
+                unlink('food_image/' .$menu->food_image);
 
             //Get unique name for a image and upload it.
             $imageName = time().'.'.request()->food_image->getClientOriginalExtension();
@@ -135,5 +136,6 @@ class LunchMenusController extends Controller
                 ->with('msg', 'Item has edited successfully');
 
     }
+
 
 }
