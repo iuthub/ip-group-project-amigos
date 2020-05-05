@@ -6,7 +6,7 @@
 	</div>
 	<hr>
 	<ul class="list-group">
-	@foreach($category as $category)
+	@foreach($categories as $category)
 	<a href="">
 		<li class="list-group-item list-group-item-action">{{ $category->categoryName }}
 			<a class="float-right deleteBtn ml-4" href="{{ route('deleteCategory', ['id' => $category->id]) }}">
@@ -18,6 +18,9 @@
 		</li>
 	</a>
 	@endforeach
+	<div class="pagination-links">
+		{{ $categories->links() }}
+	</div>
 </ul>
 </div>
 @endsection 

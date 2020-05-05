@@ -10,8 +10,8 @@ class CategoryController extends Controller
 
   public function index()
   {
-    $category = Category::all();
-    return view('admin.category.allCategories', ['category' => $category]);
+    $categories = \DB::table('categories')->paginate(8);
+    return view('admin.category.allCategories', ['categories' => $categories]);
   }
     
   public function create()
