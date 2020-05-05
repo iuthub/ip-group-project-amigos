@@ -30,7 +30,11 @@ Route::post('/admin/menu/store',[
 	'uses'=>'LunchMenusController@postCreateLunch',
 	'as' => 'adminCreateLunch'
 ]);
+
 Route::get('/admin/menu/create', 'LunchMenusController@create')->name('createMenu');
+Route::get('/admin/menu/{id}/delete', 'LunchMenusController@delete')->name('deleteMenu');
+Route::get('/admin/menu/{id}/edit', 'LunchMenusController@edit')->name('editMenu');
+Route::post('/admin/menu/{id}/update', 'LunchMenusController@update')->name('updateMenu');
 
 //Auth Controllers
 Auth::routes();
