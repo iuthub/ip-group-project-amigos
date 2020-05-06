@@ -1,8 +1,8 @@
 <nav class="navbar navbar-dark bg-dark">
 	<div class="container">
 		<a class="nav-link" href="/">
-			<p class="restourant_name">AMIGOS</p>
-		</a>
+      <p class="restourant_name"><img class="logo_nav" src="logo/logo_nav.png"></p>
+    </a>
 
 		@if(auth()->check() && auth()->user()->isAdmin())
 			<a class="nav-link"

@@ -1,6 +1,6 @@
 <hr>
 <div class="subtitle">
-	<p class="restourant_name"><br><p class="restourant_name">AMIGOS</p></p>
+  <p class="restourant_name"><img class="logo_footer" src="logo/logo_footer.png"></p>
 </div>
 <div>
 	<nav class="nav justify-content-center">
