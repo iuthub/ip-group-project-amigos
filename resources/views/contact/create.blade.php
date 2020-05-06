@@ -43,11 +43,11 @@
     <label for="email">E-mail</label>
     <input type="email" id="email" name="email" placeholder="amigos@gmail.com">
     @if ($errors->has('email'))
-    	<small class="form-text invalid-feedback">wriet email </small>
+    	<small class="form-text invalid-feedback">write email </small>
     @endif
 
     <label for="feedback">Leave your comment</label>
-    <textarea id="subject" name="feedback" placeholder="I am writing about..." style="height:200px"></textarea>
+    <textarea id="feedback" name="feedback" placeholder="I am writing about..." style="height:200px"></textarea>
     @if ($errors->has('feedback'))
     	<small class="form-text invalid-feedback">{{ $errors->first('feedback') }}</small>
     @endif

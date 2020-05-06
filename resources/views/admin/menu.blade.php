@@ -22,13 +22,15 @@
 			<a href="{{ route('createMenu') }}" class="btnCategory">Add Menu</a>
 		</div>
 	<hr>
-	<div class="row">
-		@foreach ($menues as $menu)
-		<div class="col-md-3 col-xl-3 mr-2">
-			@include('partials.item')
+		<div class="menues">
+			@foreach ($menues as $menu)
+				@include('partials.item')
+			@endforeach
 		</div>
-		@endforeach
+	<div class="pagination-links">
+		{{ $menues->links() }}
 	</div>
+	
 	
 	
 </div>
