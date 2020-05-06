@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\MenuLunch;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -10,8 +11,8 @@ class CategoryController extends Controller
 
   public function index()
   {
-    $category = Category::all();
-    return view('admin.category.allCategories', ['category' => $category]);
+    $categories = \DB::table('categories')->paginate(8);
+    return view('admin.category.allCategories', ['categories' => $categories]);
   }
     
   public function create()
@@ -66,6 +67,9 @@ class CategoryController extends Controller
           ->route('allCategories')
           ->with('msg', 'Category has been deleted successfully');
   }
+
+
+  
 
     
 }
