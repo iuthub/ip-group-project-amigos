@@ -49,19 +49,19 @@
 hr{
 	 border: 1px solid #bda17e;
 }
-.image{
-	width: 120%;
-	height: 120%;
-	padding:0px;
-	margin:0px;
-	display: inline;
+.logo_nav{
+  width: 120%;
+  height: 120%;
+  padding:0px;
+  margin:0px;
+  display: inline;
 }
-.image2{
-	width: 30%;
-	height: 30%;
-	padding:0px;
-	margin:0px;
-	display: inline;
+.logo_footer{
+  width: 30%;
+  height: 30%;
+  padding:0px;
+  margin:0px;
+  display: inline;
 }
 
 
