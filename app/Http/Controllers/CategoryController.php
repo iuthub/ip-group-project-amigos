@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\MenuLunch;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -66,6 +67,9 @@ class CategoryController extends Controller
           ->route('allCategories')
           ->with('msg', 'Category has been deleted successfully');
   }
+
+
+  
 
     
 }

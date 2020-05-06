@@ -7,7 +7,7 @@
 	<hr>
 	<ul class="list-group">
 	@foreach($categories as $category)
-	<a href="">
+	<a href="{{ route('categoryMenu', ['id' => $category->id]) }}">
 		<li class="list-group-item list-group-item-action">{{ $category->categoryName }}
 			<a class="float-right deleteBtn ml-4" href="{{ route('deleteCategory', ['id' => $category->id]) }}">
 				<i class="far fa-trash"></i>
