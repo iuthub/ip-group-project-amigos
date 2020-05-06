@@ -8,7 +8,7 @@
 			Authentic Charm</p>
 	</div>
 	<div class="d-flex flex-row justify-content-between">
-		<div class="block"><img src="images/avocado.jpg" alt=""></div>
+		<div class="block"><img src="{{ asset('images/avocado.jpg') }}" alt=""></div>
 		<div class="block">
 			<div class="description">
 				<p>We invite you and your family to take part in the Amigos’s</p>
@@ -16,7 +16,7 @@
 				<p>mouthwatering Latin flavors in a casual-chic setting.</p>
 			</div>
 		</div>
-		<div class="block"><img src="images/peppers.jpg" alt=""></div>
+		<div class="block"><img src="{{ asset('images/peppers.jpg') }}" alt=""></div>
 	</div>
 	<div class="card-group">
 		<div class="card mb-3" style="max-width: 70%;">
@@ -30,13 +30,13 @@
 				</div>
 				<div class="col-md-6">
 					<div class="mySlides">
-						<img src="images/1.jpg">
+						<img src="{{ asset('images/1.jpg') }}">
 					</div>
 					<div class="mySlides">
-						<img src="images/2.jpg">
+						<img src="{{ asset('images/2.jpg') }}">
 					</div>
 					<div class="mySlides">
-						<img src="images/3.jpg">
+						<img src="{{ asset('images/3.jpg') }}">
 					</div>
 				</div>
 			</div>

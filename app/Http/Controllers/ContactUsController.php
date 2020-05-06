@@ -15,32 +15,23 @@ class ContactUsController extends Controller
      */
     public function create()
     {
-        return view('contact.create');//
+        return view('contact.create');
     }
     
 
-    public function store(Request $request)
+    public function store(Request $req)
+
     {
-        $this->validate($request,[
-      'firstname'=>'required|min:1',
-      'lastname'=>'required',
-      'email'=>'required|email',
-      'feedback'=>'required']);
+        $this->validate( $req, [
+            'firstname' => 'required|min:1',
+            'lastname' => 'required|min:3',
+            'email' => 'required|email',
+            'feedback '=> 'required|'
+        ]);
 
       
-        return redirect()->route('contact');
+        return redirect()->route('contact')->with(['info'=>'Sent! Thank you for your feedback' ]);
 
-
-session()->flash('notif',' Message has been sent to Amigos Team');
-
-/*return redirect::to("/contact")->withSuccess("success message");*/
-
-       /*Mail::send('contact/emails.contact-message',[ 'msg'=>$request->feedback], function($mail) use($request){
-            $mail->from($request->email, $request->fi rstname);
-            $mail->to('kjasurbekova@gmail.com')->subject('Contact Message');
-        });
-        return redirect()->back()->with('flash_message','Thank you for your feedback!');*/
-        }
+    }
 
 }
-?>
