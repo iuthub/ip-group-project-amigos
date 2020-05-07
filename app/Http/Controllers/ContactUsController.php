@@ -29,8 +29,11 @@ class ContactUsController extends Controller
             'feedback '=> 'required|'
         ]);
 
-      
-        return redirect()->route('contact')->with(['info'=>'Sent! Thank you for your feedback' ]);
+        
+
+       return redirect()
+              ->route('contact')
+              ->with('msg', 'Message has been sent to Amigos team');
 
     }
 

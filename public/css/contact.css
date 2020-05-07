@@ -27,12 +27,9 @@ input[type=text], input[type=email], select, textarea {
 
 input[type=submit] {
   background-color: #bb192e;
-<<<<<<< HEAD
-  color: white;
 
-=======
-  color: rgb(235, 235, 235);
->>>>>>> ced0228f6ff3fdbd9a1bf374380aeaddc8c0e898
+  color: white;
+  
   padding: 10px 40px;
   margin-left: 500px;
   margin-right: 500px;
