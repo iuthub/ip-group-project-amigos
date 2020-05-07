@@ -3,7 +3,7 @@
   position: relative;
   align-items: center;
   width: 20%;
-  margin-left: 580px;
+  margin-left: 555px;
   margin-top: 200px;
   margin-bottom: 300px;
 }
@@ -73,12 +73,12 @@
   background-color: #bb192e; /* Green */
   border: none;
   color: white;
- padding: 8px 14px;
+  padding: 8px 16px;
   text-align: center;
   text-shadow: transparent;
   display: inline-block;
-  font-size: 12px;
-  margin-right: 10px;
+  font-size: 13px;
+  margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 8px;
@@ -96,9 +96,6 @@
   text-decoration: none;
   color: black;
 }
-
-
-
 
 .adminPanel:hover .image {
   opacity: 0.3;

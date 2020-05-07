@@ -21,6 +21,4 @@
   <div class="pagination-links">
     {{ $categories->links() }}
   </div>
-</ul>
-</div>
 @endsection
