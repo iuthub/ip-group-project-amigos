@@ -15,6 +15,11 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->string('food_type');
+            $table->float('food_number');
+            $table->float('food_price');
+            $table->boolean('recived')->default(false);
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }

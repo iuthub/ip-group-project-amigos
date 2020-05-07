@@ -21,8 +21,13 @@
 				<p>FOOD & DRINK</p>
 			</a>
 
-			<a class="nav-link" href="#">
-				<p>MAKE ORDER</p>
+			<a class="nav-link nav-icon" href="#">
+				<p class="order-p">ORDERS
+					@if(auth()->check() && auth()->user()->orders)
+						<i class="card-icon fas fa-cart-plus ml-1"></i>
+						<span class="span-icon">3</span>
+					@endif
+				</p>
 			</a>
 
 			<a class="nav-link" href="/contact">
