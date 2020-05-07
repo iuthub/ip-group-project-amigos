@@ -25,7 +25,7 @@
 		<div class="search">
 			{{ csrf_field() }}
 			<input class="search_input" type="text" name="search_item" placeholder="Search...">
-			<button class="btn btn-primary">Search</button>
+			<button class="btnCategory">Search</button>
 		</div>
 	</form>
 </div>
