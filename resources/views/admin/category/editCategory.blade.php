@@ -3,12 +3,12 @@
 <div class="container">
   <form style="margin: 100px" method="POST" action="{{route('updateCategory', ['id'=> $category->id]) }}">
     @csrf
-    <h3 class="text-center mb-5">Edit Category</h3>
+    <h3 class="text-center mb-5" style="color: #bb192e;">Edit Category</h3>
     <div class="from-group">
-      <input value="{{ $category->categoryName }}" type="text" placeholder="Category name" name="categoryName" class="form-control">
+      <input style="color: black;" value="{{ $category->categoryName }}" type="text" placeholder="Category name" name="categoryName" class="form-control">
     </div>
     <div class="from-group mt-2">
-      <button class="btn btn-primary" type="submit">Update</button>
+      <button class="btnCategory" type="submit">Update</button>
     </div>
   </form>
 </div>

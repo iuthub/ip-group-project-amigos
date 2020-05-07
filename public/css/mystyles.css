@@ -49,19 +49,19 @@
 hr{
 	 border: 1px solid #bda17e;
 }
-.image{
-	width: 120%;
-	height: 120%;
-	padding:0px;
-	margin:0px;
-	display: inline;
+.logo_nav{
+  width: 120%;
+  height: 120%;
+  padding:0px;
+  margin:0px;
+  display: inline;
 }
-.image2{
-	width: 30%;
-	height: 30%;
-	padding:0px;
-	margin:0px;
-	display: inline;
+.logo_footer{
+  width: 30%;
+  height: 30%;
+  padding:0px;
+  margin:0px;
+  display: inline;
 }
 
 
@@ -250,30 +250,48 @@ td>input {
 	justify-content: space-evenly;
 	
 }
+.search{
+	display: flex;
+	justify-content: flex-end;
+}
+.search_input{
+	border-radius: 3px;
+}
+
+.add_search{
+	display: flex;
+	justify-content: space-between;
+}
+
 .card:hover{
 	border-color: #bb192e;
 }
+
 .card{
 	-webkit-box-shadow: 0px 4px 25px -11px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 4px 25px -11px rgba(0,0,0,0.75);
 	box-shadow: 0px 4px 25px -11px rgba(0,0,0,0.75);
 	overflow: hidden;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
+
 .card .card-img-top{
 	transition: transform 0.4s linear;
 }
+
 .card .card-img-top:hover{
 	transform:  scale(1.1) translate(-10px);
 	transition: transform 0.4s linear;
 }
 
 .pagination-links{
-	
 	margin: 0 auto;
 	padding-top: 60px;
 	width: 200px;
 }
 
+<<<<<<< HEAD
 .inputNumber{
 	width: 40px;
 	border: none;
@@ -294,3 +312,5 @@ td>input {
 	border: 1px solid #fff;
 	border-radius: 10px;
 }
+=======
+>>>>>>> 40755bdd3f72be969a4ddf6667c40f9f8c1486ce

@@ -19,18 +19,21 @@ class ContactUsController extends Controller
     }
     
 
-    public function store(Request $request)
+    public function store(Request $req)
 
     {
-        $this->validate( $request, [
+        $this->validate( $req, [
             'firstname' => 'required|min:1',
-            'lastname' => 'required',
+            'lastname' => 'required|min:3',
             'email' => 'required|email',
-            'feedback '=> 'required'
+            'feedback '=> 'required|'
         ]);
 
-      
-        return redirect()->route('contact');
+        
+
+       return redirect()
+              ->route('contact')
+              ->with('msg', 'Message has been sent to Amigos team');
 
     }
 
