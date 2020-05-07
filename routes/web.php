@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-
+//Landing page
 Route::get('/', function(){
     return view('main.index');
 })->name('mainIndex');
@@ -39,13 +39,8 @@ Route::post('/admin/menu/{id}/update', 'LunchMenusController@update')->name('upd
 //Auth Controllers
 Auth::routes();
 
-
-
 //Admin Controllers
 Route::get('/admin', 'HomeController@index');
-
-
-
 
 //Cateogry Controllers
 Route::get('/admin/category/allCategories', 'CategoryController@index')->name('allCategories');
@@ -55,3 +50,6 @@ Route::get('/admin/category/{id}/edit','CategoryController@edit')->name('editCat
 Route::post('admin/category/{id}/update', 'CategoryController@update')->name('updateCategory');
 Route::get('/admin/category/{id}/delete', 'CategoryController@delete')->name('deleteCategory');
 Route::get('/admin/category/{id}/categoryMenu', 'CategoryController@categoryMenu')->name('categoryMenu');
+
+//Order
+Route::get('/order/{id}/', 'OrderController@index')->name('order');

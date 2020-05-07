@@ -273,3 +273,11 @@ td>input {
 	padding-top: 60px;
 	width: 200px;
 }
+
+.inputNumber{
+	width: 40px;
+	border: none;
+	outline: none;
+	
+	border-bottom: solid 1px #bb192e;
+}
