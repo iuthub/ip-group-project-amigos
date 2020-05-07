@@ -1,9 +1,13 @@
 <?php
-
+// use App\Http\Controllers\Controller;
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Session\Store;
+use Illuminate\Support\Facades\DB;
+// namespace App\Http\Controllers\User;
+// use Illuminate\Support\Facades\Input;
+
 use App\MenuLunch;
 use App\Category;
 class LunchMenusController extends Controller
@@ -135,6 +139,17 @@ class LunchMenusController extends Controller
                 ->route('adminGetMenu')
                 ->with('msg', 'Item has edited successfully');
 
+    }
+
+   
+
+        public function userSearch(Request $request)
+    {
+        $search_item = isset($_GET['search_item']) ? $_GET['search_item'] : null;
+        $menus = \DB::table('menu_lunches');
+        $menus->where('menu_lunches.food_name', 'LIKE', '%' .$search_item. '%', );
+        $menus = $menus->get();
+        return view('menu.found_items', compact('menus'));
     }
 
 

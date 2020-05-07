@@ -17,10 +17,18 @@
 			<p>mouthwatering Latin flavors in a casual-chic setting.</p>
 		</div>
 	</div>
-
+<div class="add_search">
 		<div class="form-group">
 			<a href="{{ route('createMenu') }}" class="btnCategory">Add Menu</a>
 		</div>
+		<form action="{{route('adminSearchMenu')}}" method="get">
+		<div class="search">
+			{{ csrf_field() }}
+			<input class="search_input" type="text" name="search_item" placeholder="Search...">
+			<button class="btn btn-primary">Search</button>
+		</div>
+	</form>
+</div>
 	<hr>
 		<div class="menues">
 			@foreach ($menues as $menu)
