@@ -56,9 +56,17 @@ Route::post('admin/category/{id}/update', 'CategoryController@update')->name('up
 Route::get('/admin/category/{id}/delete', 'CategoryController@delete')->name('deleteCategory');
 
 
+
 Route::get('/menu/search',[
 	'uses' => 'LunchMenusController@userSearch',
 	'as' => 'userSearchMenu'
 ]);
 
+Route::get('/menu/admin/search',[
+	'uses' => 'LunchMenusController@userSearch',
+	'as' => 'adminSearchMenu'
+]);
+
 // Route::get('/menu/search', 'LunchMenuesController@index');
+Route::get('/admin/category/{id}/categoryMenu', 'CategoryController@categoryMenu')->name('categoryMenu');
+

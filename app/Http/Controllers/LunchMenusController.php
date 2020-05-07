@@ -141,37 +141,15 @@ class LunchMenusController extends Controller
 
     }
 
-    // public function userSearch(Request $request){
-    //     $search_item = $request->get('search_item');
-    //     $menus = MenuLunch::where('food_name','LIKE','%'.$search_item.'%')->get();
-    //     // $menus = MenuLunch::all();
-    //     // return view('menu.menu')->withDetails($menues->withQuery($search_item));
-    //     // return view('menu.found_items')->withDetails($menu->withQuery($search_item));
-    //     return view('menu.found_items', ['menus'=>$menus]);
-
-    // }
-
-
-    // public function index()
-    // {
-    //     $menus = DB::table('menu_lunches');
-    //     return view('menu.found_items', compact('menus'));
-    // }
+   
 
         public function userSearch(Request $request)
     {
-
-
         $search_item = isset($_GET['search_item']) ? $_GET['search_item'] : null;
-        $menus = DB::table('menu_lunches');
+        $menus = \DB::table('menu_lunches');
         $menus->where('menu_lunches.food_name', 'LIKE', '%' .$search_item. '%', );
         $menus = $menus->get();
-        // if( $request->input('search_item')){
-        //     $menus = $menus->where('food_name', 'LIKE', "%" . $request->search_item . "%");
-        // }
-        // $data = $data->paginate(10);
         return view('menu.found_items', compact('menus'));
-        getUserLunch();
     }
 
 

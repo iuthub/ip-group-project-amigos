@@ -18,9 +18,11 @@
 		</div>
 	</div>
 	<form action="{{route('userSearchMenu')}}" method="get">
-		{{-- {{ csrf_field() }} --}}
-		<input type="text" name="search_item" placeholder="Search...">
-		<button class="btn btn-primary">Search</button>
+		<div class="search">
+			{{ csrf_field() }}
+			<input class="search_input" type="text" name="search_item" placeholder="Search...">
+			<button class="btn btn-primary">Search</button>
+		</div>
 	</form>
 	<hr>
 	<div class="menues">
