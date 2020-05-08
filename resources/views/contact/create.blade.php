@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width,initial scale=1.0">
-		<title>Contact Amigos</title>
+
+		 <title>Contact Amigos</title>
 		<link rel="stylesheet" type="text/css" href="css/contact.css">
 		<link rel="stylesheet" type="text/css" href="js/contactUs.js">
 		<link rel="stylesheet" href="{{ URL::to('css/bootstrap.css') }}">

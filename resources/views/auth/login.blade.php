@@ -36,8 +36,8 @@
         </button>
          </label>
             @if (Route::has('password.request'))
-            <a class="text-body" href="{{ route('password.request') }}">
-                {{ __('Forgot Your Password?') }}
+            <a class="text-body" href="{{ route('register') }}">
+                {{ __('Dont have account yet?') }}
             </a>
             @endif
     </form>

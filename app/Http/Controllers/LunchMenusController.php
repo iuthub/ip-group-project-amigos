@@ -1,12 +1,10 @@
 <?php
-// use App\Http\Controllers\Controller;
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Session\Store;
 use Illuminate\Support\Facades\DB;
-// namespace App\Http\Controllers\User;
-// use Illuminate\Support\Facades\Input;
+
 
 use App\MenuLunch;
 use App\Category;

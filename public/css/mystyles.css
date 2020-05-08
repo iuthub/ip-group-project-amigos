@@ -291,3 +291,31 @@ td>input {
 	width: 200px;
 }
 
+.inputNumber{
+	width: 40px;
+	border: none;
+	outline: none;
+	border-bottom: solid 1px #bb192e;
+}
+
+
+.card-icon{
+	position: absolute;
+}
+.span-icon{
+	position: relative;
+	font-size: 15px;
+	top: 5px;
+	left: 27px;
+	padding: 4px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+}
+.recived{
+	color: #28A745;
+	border: 2px solid #28A745;
+
+}
+a .recived-trash-btn{
+	color: #bb192e;
+}

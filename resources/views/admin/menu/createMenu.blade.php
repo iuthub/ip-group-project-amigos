@@ -60,7 +60,7 @@
                 @enderror
             </div>
             <div class="form-group">
-                <button class="btn btn-success">Create</button>
+                <button class="btnCategory">Create</button>
             </div>
         </form>
 	</div>
