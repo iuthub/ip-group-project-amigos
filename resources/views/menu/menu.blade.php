@@ -17,13 +17,30 @@
 			<p>mouthwatering Latin flavors in a casual-chic setting.</p>
 		</div>
 	</div>
+<<<<<<< HEAD
 	<form action="{{route('userSearchMenu')}}" method="get">
 		<div class="search">
 			{{ csrf_field() }}
 			<input class="search_input2" type="text" name="search_item" placeholder="Search...">
 			<button class="btnCategory">Search</button>
+=======
+	<div class="row">
+		<div class="col-8">
+
 		</div>
-	</form>
+		<div class="col-4">
+
+			<form action="{{route('userSearchMenu')}}" method="get">
+				<div class="search">
+					{{ csrf_field() }}
+					
+					<input class="form-control" type="text" name="search_item" placeholder="Search...">
+					<button class="btn btn-primary">Search</button>
+				</div>
+			</form>
+>>>>>>> 75ed1f2c763ee1385e52ea2f66809b07d47affe5
+		</div>
+	</div>
 	<hr>
 	<div class="menues">
 		@foreach ($menues as $menu)

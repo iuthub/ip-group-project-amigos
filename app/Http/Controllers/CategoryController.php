@@ -70,14 +70,10 @@ class CategoryController extends Controller
 
 
   public function categoryMenu($id)
-    {
-      $menues = MenuLunch::where('category_id', $id)->paginate(4);
-      
-      return view('admin.category.categoryMenu', ['menues' => $menues]);
-    }
- 
-
-  
-
+  {
+    $menues = MenuLunch::where('category_id', $id)->paginate(4);
+    
+    return view('admin.category.categoryMenu', ['menues' => $menues]);
+  }
     
 }

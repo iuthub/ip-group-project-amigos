@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-
+//Landing page
 Route::get('/', function(){
     return view('main.index');
 })->name('mainIndex');
@@ -39,13 +39,8 @@ Route::post('/admin/menu/{id}/update', 'LunchMenusController@update')->name('upd
 //Auth Controllers
 Auth::routes();
 
-
-
 //Admin Controllers
 Route::get('/admin', 'HomeController@index');
-
-
-
 
 //Cateogry Controllers
 Route::get('/admin/category/allCategories', 'CategoryController@index')->name('allCategories');
@@ -54,6 +49,13 @@ Route::post('/admin/category/store', 'CategoryController@store')->name('storeCat
 Route::get('/admin/category/{id}/edit','CategoryController@edit')->name('editCategory');
 Route::post('admin/category/{id}/update', 'CategoryController@update')->name('updateCategory');
 Route::get('/admin/category/{id}/delete', 'CategoryController@delete')->name('deleteCategory');
+Route::get('/admin/category/{id}/categoryMenu', 'CategoryController@categoryMenu')->name('categoryMenu');
+
+//Order
+Route::get('/order/myOrders', 'OrderController@myOrders')->name('myOrders');
+Route::get('/order/{id}/', 'OrderController@index')->name('order');
+Route::get('/order/cancel/{id}/', 'OrderController@cancel')->name('cancelOrder');
+Route::post('/order/confirm/', 'OrderController@confirmOrder')->name('confirmOrder');
 
 
 
@@ -69,4 +71,10 @@ Route::get('/menu/admin/search',[
 
 // Route::get('/menu/search', 'LunchMenuesController@index');
 Route::get('/admin/category/{id}/categoryMenu', 'CategoryController@categoryMenu')->name('categoryMenu');
+
+//Admin order pages
+Route::get('/admin/order/', 'OrderAdminController@index')->name('adminOrderPage');
+Route::get('/admin/order/delivered/{id}', 'OrderAdminController@delivered')->name('delivered');
+Route::get('/admin/order/cancel/{id}', 'OrderAdminController@cancel')->name('adminOrderCancel');
+
 
