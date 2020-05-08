@@ -25,7 +25,9 @@
 					<div class="card-body">
 						<div class="subtitle"><br><p>Our Food</p></div>
 						<div class="description"><p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p></div>
-						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>					
+					
+						<div class="see-all"><a href="{{(!auth()->check() || !auth()->user()->isAdmin()) ?  route('getMenu') : route('adminGetMenu')}}">See All</a></div>
+
 					</div>
 				</div>
 				<div class="col-md-6">
