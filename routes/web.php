@@ -43,7 +43,8 @@ Auth::routes();
 
 //Admin Controllers
 Route::get('/admin', 'HomeController@index');
-
+Route::get('/admin/user/{id}/delete', 'HomeController@userDelete')->name('userDelete');
+Route::get('/admin/user/{id}/makeadmin', 'HomeController@userAdmin')->name('userAdmin');
 
 
 

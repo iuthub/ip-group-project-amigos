@@ -27,3 +27,23 @@ class HomeController extends Controller
         return view('admin/index');
     }
 }
+public function userDelete($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return redirect()
+                ->route('admin')
+                ->with('msg', 'User has been deleted successfully');
+    }
+
+    public function userAdmin($id)
+    {
+        $user = User::findOrFail($id);
+        $user->type = 'admin';
+        $user->save();
+
+        return redirect()
+                ->route('admin')
+                ->with('msg', 'User has been promoted successfully');
+    }
