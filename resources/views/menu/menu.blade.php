@@ -1,5 +1,4 @@
 @extends('layouts.master')
-
 @section('content')
 <div class="menu-land">
 	<br><br><br><br><br><br><br><br><br><br>
@@ -18,16 +17,27 @@
 			<p>mouthwatering Latin flavors in a casual-chic setting.</p>
 		</div>
 	</div>
-		<hr>
-		<div class="menues">
-			@foreach ($menues as $menu)
-				@include('partials.item')
-			@endforeach
-		</div>
-		<div class="pagination-links">
-			{{ $menues->links() }}
+
+	
+
+			<form action="{{route('userSearchMenu')}}" method="get">
+				<div class="search">
+					{{ csrf_field() }}
+					
+					<input class="form-control" type="text" name="search_item" placeholder="Search...">
+					<button class="btnCategory">Search</button>
+				</div>
+			</form>
 		</div>
 	</div>
+	<hr>
+	<div class="menues">
+		@foreach ($menues as $menu)
+		@include('partials.item')
+		@endforeach
+	</div>
+	<div class="pagination-links">
+		{{ $menues->links() }}
 	</div>
 </div>
 

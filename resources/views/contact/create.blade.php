@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width,initial scale=1.0">
-		<title>Contact Amigos</title>
+
+		 <title>Contact Amigos</title>
 		<link rel="stylesheet" type="text/css" href="css/contact.css">
 		<link rel="stylesheet" type="text/css" href="js/contactUs.js">
 		<link rel="stylesheet" href="{{ URL::to('css/bootstrap.css') }}">
@@ -43,11 +44,11 @@
     <label for="email">E-mail</label>
     <input type="email" id="email" name="email" placeholder="amigos@gmail.com">
     @if ($errors->has('email'))
-    	<small class="form-text invalid-feedback">wriet email </small>
+    	<small class="form-text invalid-feedback">write email </small>
     @endif
 
     <label for="feedback">Leave your comment</label>
-    <textarea id="subject" name="feedback" placeholder="I am writing about..." style="height:200px"></textarea>
+    <textarea id="feedback" name="feedback" placeholder="I am writing about..." style="height:200px"></textarea>
     @if ($errors->has('feedback'))
     	<small class="form-text invalid-feedback">{{ $errors->first('feedback') }}</small>
     @endif

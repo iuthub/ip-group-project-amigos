@@ -1,15 +1,19 @@
 <nav class="navbar navbar-dark bg-dark">
 	<div class="container">
 		<a class="nav-link" href="/">
-			<p class="restourant_name">AMIGOS</p>
-		</a>
+      <p class="restourant_name"><img class="logo_nav" src="{{ asset('logo/logo_nav.png') }}"></p>
+    </a>
 
 		@if(auth()->check() && auth()->user()->isAdmin())
+			<a class="nav-link"
+				href="/admin">
+				<p>DASHBOARD</p>
+			</a>
 			<a class="nav-link"
 				href="{{ route('adminGetMenu') }}">
 				<p>MENU</p>
 			</a>
-			<a class="nav-link" href="#">
+			<a class="nav-link" href="{{ route('adminOrderPage') }}">
 				<p>ORDERS</p>
 			</a>
 			<a class="nav-link" href="{{ route('allCategories') }}">
@@ -21,8 +25,13 @@
 				<p>FOOD & DRINK</p>
 			</a>
 
-			<a class="nav-link" href="#">
-				<p>MAKE ORDER</p>
+			<a class="nav-link nav-icon" href="{{ route('myOrders') }}">
+				<p class="order-p">ORDERS
+					@if(auth()->check() && auth()->user()->orders)
+						<i class="card-icon fas fa-cart-plus ml-1"></i>
+						<span class="span-icon">{{ count(auth()->user()->orders) }}</span>
+					@endif
+				</p>
 			</a>
 
 			<a class="nav-link" href="/contact">

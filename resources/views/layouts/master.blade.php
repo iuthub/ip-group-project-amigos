@@ -4,6 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap-grid.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/bootstrap-personalization.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap-reboot.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/mystyles.css') }}">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>

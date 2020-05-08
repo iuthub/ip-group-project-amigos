@@ -17,6 +17,18 @@
                 </span>
             @enderror
         </div>
+        <label for="">Phone number</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">+998</span>
+            </div>
+            <input name="number" type="text" class="form-control @error('number') is-invalid @enderror" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            @error('number')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
+        </div>
          <div class="form-group">
             <label for="email">{{ __('E-Mail Address') }}</label>
             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -26,6 +38,7 @@
             </span>
             @enderror
         </div>
+        
         <div class="form-group">
             <label for="password">{{ __('Password') }}</label>
             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -37,7 +50,7 @@
         </div>
         <div class="form-group">
             <label for="password-confirm">{{ __('Confirm Password') }}</label>
-                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
         </div>
 
         <button type="submit" class="btn btn-secondary">

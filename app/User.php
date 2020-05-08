@@ -13,7 +13,7 @@ class User extends Authenticatable
     private const ADMIN = "admin";
     
     protected $fillable = [
-        'name', 'email', 'password', 'type'
+        'name', 'email', 'password', 'type', 'number'
     ];
 
     
@@ -30,6 +30,11 @@ class User extends Authenticatable
     public function isAdmin()
     {     
         return $this->type === self::ADMIN;    
+    }
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
     }
 
 }
