@@ -291,7 +291,6 @@ td>input {
 	width: 200px;
 }
 
-<<<<<<< HEAD
 .inputNumber{
 	width: 40px;
 	border: none;
@@ -312,5 +311,11 @@ td>input {
 	border: 1px solid #fff;
 	border-radius: 10px;
 }
-=======
->>>>>>> 40755bdd3f72be969a4ddf6667c40f9f8c1486ce
+.recived{
+	color: #28A745;
+	border: 2px solid #28A745;
+
+}
+a .recived-trash-btn{
+	color: #bb192e;
+}

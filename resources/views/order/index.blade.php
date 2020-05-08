@@ -1,31 +1,52 @@
 @extends('layouts.master')
 @section('content')
-<div class="menues" style="margin-top:100px">
-    <div class="card" style="width: 20rem; height: 31rem;">
-        <img class="card-img-top" src="{{ $menu->food_image ? asset('food_image/' .$menu->food_image) : 
-        asset('img/pic1.jpg')
-        }}" alt="Menu image">
-        <div class="card-body">
-        <h5 class="card-title">{{ $menu->food_name }}</h5>
-        <p class="card-text">{{ $menu->food_description }}.</p>
-        <p class="card-text">Price: <span id="val">{{ $menu->food_price }}</span>$</p>
-        @if(auth()->check() && auth()->user()->isAdmin())
-            <a class="deleteBtn mr-4" href="{{ route('deleteMenu', ['id' => $menu->id]) }}">
-            <i class="far fa-lg fa-trash"></i>
-            </a>
-            <a class="editBtn" href="{{ route('editMenu', ['id' => $menu->id]) }}">
-            <i class="fas fa-lg fa-edit"></i>
-            </a>
-        @else
-            <span class="totalPrice mr-3"></span>
-            <input id="inputNumber" max="100" value="1" class="inputNumber" min="1" type="number">
-            <a class="mt-2 btn btn-primary" href="">Confirm Order{{--<i class="fas fa-lg fa-cart-plus"></i>--}}</a>
-        @endif
+<form action="{{ route('confirmOrder') }}" method="POST">
+  @csrf
+  <div class="container">
+    <div class="row">
+      @if(auth()->check() && auth()->user()->address == null)
+        <div class="col-6">
+          @include('partials.order')
         </div>
+        <div class="col-6">
+          <div class="form-group"  style="margin-top:100px">
+            <label for="">Adress</label>
+            <textarea name="address" required class="form-control @error('address') is-invalid @enderror" name="" id="" cols="30" rows="10"></textarea>
+            @error('address')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success">Confirm order</button>
+          </div>
+        </div>
+      @elseif(auth()->check() && auth()->user()->address != null)
+        <div class="col-6">
+          @include('partials.order')
+        </div>
+        <div class="col-6">
+          <div class="form-group"  style="margin-top:100px">
+            <label for="">Adress</label>
+            <textarea name="address" required class="form-control @error('address') is-invalid @enderror" name="" id="" cols="30" rows="10">{{ auth()->user()->address }}</textarea>
+            @error('address')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success">Confirm order</button>
+          </div>
+        </div>
+      @endif
     </div>
-</div>
+  </div>
+
+</form>
 <script>
-  //Selecting from html
+    //Selecting from html
   let inputNumber = document.querySelector('#inputNumber');
   var inputValue = inputNumber.value;
   let value = document.querySelector('#val').innerHTML;

@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->float('food_number');
             $table->float('food_price');
             $table->boolean('recived')->default(false);
+            $table->string('address');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });

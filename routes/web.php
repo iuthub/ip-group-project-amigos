@@ -52,7 +52,10 @@ Route::get('/admin/category/{id}/delete', 'CategoryController@delete')->name('de
 Route::get('/admin/category/{id}/categoryMenu', 'CategoryController@categoryMenu')->name('categoryMenu');
 
 //Order
+Route::get('/order/myOrders', 'OrderController@myOrders')->name('myOrders');
 Route::get('/order/{id}/', 'OrderController@index')->name('order');
+Route::get('/order/cancel/{id}/', 'OrderController@cancel')->name('cancelOrder');
+Route::post('/order/confirm/', 'OrderController@confirmOrder')->name('confirmOrder');
 
 
 
@@ -68,4 +71,10 @@ Route::get('/menu/admin/search',[
 
 // Route::get('/menu/search', 'LunchMenuesController@index');
 Route::get('/admin/category/{id}/categoryMenu', 'CategoryController@categoryMenu')->name('categoryMenu');
+
+//Admin order pages
+Route::get('/admin/order/', 'OrderAdminController@index')->name('adminOrderPage');
+Route::get('/admin/order/delivered/{id}', 'OrderAdminController@delivered')->name('delivered');
+Route::get('/admin/order/cancel/{id}', 'OrderAdminController@cancel')->name('adminOrderCancel');
+
 
