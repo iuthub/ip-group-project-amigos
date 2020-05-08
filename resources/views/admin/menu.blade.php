@@ -23,22 +23,12 @@
 				<a href="{{ route('createMenu') }}" class="btnCategory">Add Menu</a>
 			</div>
 		</div>
-<<<<<<< HEAD
+
 		<form action="{{route('adminSearchMenu')}}" method="get">
 		<div class="search">
 			{{ csrf_field() }}
 			<input class="search_input" type="text" name="search_item" placeholder="Search...">
 			<button class="btnCategory">Search</button>
-=======
-		<div class="col-4">
-			<form action="{{route('adminSearchMenu')}}" method="get">
-				<div class="search">
-					{{ csrf_field() }}
-					<input class="form-control" type="text" name="search_item" placeholder="Search...">
-					<button class="btn btn-primary">Search</button>
-				</div>
-			</form>
->>>>>>> 75ed1f2c763ee1385e52ea2f66809b07d47affe5
 		</div>
 	</div>
 	<hr>
