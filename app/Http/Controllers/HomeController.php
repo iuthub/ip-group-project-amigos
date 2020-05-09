@@ -45,3 +45,4 @@ class HomeController extends Controller
                 ->with('msg', 'User has been promoted successfully');
     }
 }
+

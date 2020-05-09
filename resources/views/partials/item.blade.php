@@ -14,7 +14,7 @@
           <i class="fas fa-lg fa-edit"></i>
         </a>
       @else
-        <a class="btn btn-success" href="{{ route('order', ['id' => $menu->id]) }}">Order</a>
+        <a class="btnCategory" href="{{ route('order', ['id' => $menu->id]) }}">Order</a>
       @endif
 
     </div>

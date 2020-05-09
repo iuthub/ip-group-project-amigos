@@ -19,7 +19,7 @@
             @enderror
           </div>
           <div class="form-group">
-            <button class="btn btn-success">Confirm order</button>
+            <button class="btnCategory">Confirm order</button>
           </div>
         </div>
       @elseif(auth()->check() && auth()->user()->address != null)
@@ -37,7 +37,7 @@
             @enderror
           </div>
           <div class="form-group">
-            <button class="btn btn-success">Confirm order</button>
+            <button class="btnCategory">Confirm order</button>
           </div>
         </div>
       @endif
