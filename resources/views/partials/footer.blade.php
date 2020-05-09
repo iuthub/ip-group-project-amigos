@@ -4,9 +4,9 @@
 </div>
 <div>
 	<nav class="nav justify-content-center">
-		<a class="nav-link" href="#"><li class="icon-car"><img src="{{asset('images/icons/instagram.svg')}}"></li></a>
-		<a class="nav-link" href="#"><li class="icon-car"><img src="{{asset('images/icons/twitter.svg')}}"></li></a>
-		<a class="nav-link" href="#"><li class="icon-car"><img src="{{asset('images/icons/facebook.svg')}}"></li></a>
+		<a class="nav-link" href="https://www.instagram.com/"><li class="icon-car"><img src="{{asset('images/icons/instagram.svg')}}"></li></a>
+		<a class="nav-link" href="https://www.twitter.com/"><li class="icon-car"><img src="{{asset('images/icons/twitter.svg')}}"></li></a>
+		<a class="nav-link" href="https://www.facebook.com/"><li class="icon-car"><img src="{{asset('images/icons/facebook.svg')}}"></li></a>
 	</nav>
 </div>
 <nav class="nav justify-content-center">
