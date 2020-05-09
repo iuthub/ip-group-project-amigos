@@ -7,14 +7,16 @@
     <ul class="list-group">
       @foreach($users as $user)
       <li class="list-group-item">
-        Name:
-          {{$user->name}}
-        <span class="ml-4">Email: {{$user->email}}</span>
-        <span class="ml-4">Number: +998{{$user->number}}</span>
+         <span class="categoryNameStyle">  Name:
+          {{$user->name}}</span><br>
+        <span class="categoryNameStyle">Email: {{$user->email}}</span>
+        <br>
+        <span class="categoryNameStyle">Number: +998{{$user->number}}</span>
+        <br>
           <a class="float-right" href="{{ route('userDelete', ['id' => $user->id]) }}">
             <i class="recived-trash-btn mt-1 far fa-lg fa-trash"></i>
           </a>
-          <a class="float-right mr-4" href="{{ route('userAdmin', ['id' => $user->id]) }}">Make admin</a>
+          <a style="color:  #bb192e" class="float-right mr-4" href="{{ route('userAdmin', ['id' => $user->id]) }}">Make admin</a>
       </li>
       @endforeach
     </ul>

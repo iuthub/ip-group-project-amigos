@@ -37,7 +37,7 @@
 				@include('partials.item')
 			@endforeach
 		</div>
-	<div class="pagination-links">
+	<div style="color: #bb192e" class="pagination-links">
 		{{ $menues->links() }}
 	</div>
 	
