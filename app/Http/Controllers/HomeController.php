@@ -23,10 +23,6 @@ class HomeController extends Controller
         $users = User::where('type', 'user')->paginate(8);
         return view('admin/index', ['users' => $users]);
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> d2bea170694b59781935b804e835c8d243782606
 
     public function userDelete($id)
     {
@@ -48,9 +44,5 @@ class HomeController extends Controller
                 ->route('admin')
                 ->with('msg', 'User has been promoted successfully');
     }
-<<<<<<< HEAD
-}
-=======
 }
 
->>>>>>> d2bea170694b59781935b804e835c8d243782606
