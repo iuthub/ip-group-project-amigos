@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('content')
 
+<<<<<<< HEAD
 
 {{--<div class="adminPanel">
   <img src="images/admin.png"  class="image" style="width:100%">
@@ -13,7 +14,10 @@
       
      </div>--}}
 
+=======
+>>>>>>> d2bea170694b59781935b804e835c8d243782606
   <div class="container mt-5" style="margin-bottom: 200px">
+    @if(count($users) > 0)
     <h4 class="text-center mt-4">All users</h4>
     <ul class="list-group">
       @foreach($errors as $user)
@@ -29,6 +33,15 @@
       </li>
       @endforeach
     </ul>
+    @else
+      <h4 class="text-center mt-4">You have no users</h4>
+    @endif
+    <div class="pagination-links">
+      {{ $users->links() }}
   </div>
+  </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> d2bea170694b59781935b804e835c8d243782606
 @endsection

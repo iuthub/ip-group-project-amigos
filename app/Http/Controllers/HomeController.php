@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
 class HomeController extends Controller
 {
     /**
@@ -17,18 +17,18 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+    
     public function index()
     {
-        return view('admin/index');
+        $users = User::where('type', 'user')->paginate(8);
+        return view('admin/index', ['users' => $users]);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d2bea170694b59781935b804e835c8d243782606
 
-public function userDelete($id)
+    public function userDelete($id)
     {
         $user = User::findOrFail($id);
         $user->delete();
@@ -48,4 +48,9 @@ public function userDelete($id)
                 ->route('admin')
                 ->with('msg', 'User has been promoted successfully');
     }
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> d2bea170694b59781935b804e835c8d243782606

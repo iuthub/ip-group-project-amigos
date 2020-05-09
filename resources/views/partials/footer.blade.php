@@ -10,10 +10,11 @@
 	</nav>
 </div>
 <nav class="nav justify-content-center">
-	<a class="nav-link" href="#"><p class="black_text">FOOD & DRINK</p></a>
-	<a class="nav-link" href="#"><p class="black_text">MAKE ORDER</p></a>
-	<a class="nav-link" href="#"><p class="black_text">CONTACT US</p></a>
-	<a class="nav-link" href="#"><p class="black_text">SIGN IN</p></a>
-	<a class="nav-link" href="#"><p class="black_text">LOCATION</p></a>
-	<a class="nav-link" href="#"><p class="black_text">OUR STORY</p></a>
+	<a class="nav-link" href="{{ route('adminGetMenu') }}"><p class="black_text">FOOD & DRINK</p></a>
+	<a class="nav-link" href="{{ route('myOrders') }}"><p class="black_text">MAKE ORDER</p></a>
+	<a class="nav-link" href="/contact"><p class="black_text">CONTACT US</p></a>
+	@guest
+		<a class="nav-link" href="/login"><p class="black_text">SIGN IN</p></a>
+		<a class="nav-link" href="/register"><p class="black_text">REGISTER</p></a>
+	@endguest
 </nav>
