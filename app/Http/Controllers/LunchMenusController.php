@@ -21,7 +21,7 @@ class LunchMenusController extends Controller
 
     public function getUserLunch()
     {
-        $menues = \DB::table('menu_lunches')->paginate(3);
+        $menues = \DB::table('menu_lunches')->paginate(4);
         return view('menu.menu',[
             'menues' => $menues
         ]);
