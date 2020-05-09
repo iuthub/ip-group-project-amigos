@@ -13,13 +13,13 @@
     <input type="text"  title="Name.." name="firstname" placeholder="John">
     @if ($errors->has('firstname'))
     	<small class="form-text invalid-feedback">{{ $errors->first('firstname') }}</small>
-	@endif
+	  @endif
 
 	<label for="lname">Last Name</label>
     <input type="text" class="form-control" id="lname" name="lastname" placeholder="Lewis">
     @if ($errors->has('lastname'))
     	<small class="form-text invalid-feedback">Please,write the lastname</small>
-	@endif
+	  @endif
 	
     <label for="email">E-mail</label>
     <input type="email" id="email" name="email" placeholder="amigos@gmail.com">
