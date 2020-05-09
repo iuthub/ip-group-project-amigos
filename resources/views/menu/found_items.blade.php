@@ -6,8 +6,6 @@
 @if(count($menu)>0 )
 	@include('partials.item')
 @else
-
-
 <p class="error_msg" role="alert">No match found</p>
 
 @endif
