@@ -2,9 +2,15 @@
 @section('content')
 <div class="container">
 <div class="menues">
-	@foreach($menus as $menu)
+	
+@if(count($menu)>0 )
 	@include('partials.item')
-	@endforeach
+@else
+
+
+<p class="error_msg" role="alert">No match found</p>
+
+@endif
 </div>
 </div>
 

@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Session\Store;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Redirect;
 
 use App\MenuLunch;
 use App\Category;
@@ -143,11 +144,11 @@ class LunchMenusController extends Controller
 
         public function userSearch(Request $request)
     {
-        $search_item = isset($_GET['search_item']) ? $_GET['search_item'] : null;
-        $menus = \DB::table('menu_lunches');
-        $menus->where('menu_lunches.food_name', 'LIKE', '%' .$search_item. '%', );
-        $menus = $menus->get();
-        return view('menu.found_items', compact('menus'));
+        $search_item =  isset($_GET['search_item']) ? $_GET['search_item'] : null;
+        $menu = \DB::table('menu_lunches');
+        $menu->where('menu_lunches.food_name', 'LIKE', '%' .$search_item. '%' );
+        $menu = $menu->get();
+        return view('menu.found_items', compact('menu'),['menu' => $menu]);
     }
 
 

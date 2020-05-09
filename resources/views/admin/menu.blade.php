@@ -24,7 +24,7 @@
 			</div>
 		</div>
 
-		<form action="{{route('adminSearchMenu')}}" method="get">
+		<form  action="{{route('adminSearchMenu')}}" method="get">
 		<div class="search">
 			{{ csrf_field() }}
 			<input class="search_input" type="text" name="search_item" placeholder="Search...">
