@@ -40,7 +40,9 @@ Route::post('/admin/menu/{id}/update', 'LunchMenusController@update')->name('upd
 Auth::routes();
 
 //Admin Controllers
-Route::get('/admin', 'HomeController@index');
+Route::get('/admin', 'HomeController@index')->name('admin');
+Route::get('/admin/user/{id}/delete', 'HomeController@userDelete')->name('userDelete');
+Route::get('/admin/user/{id}/makeadmin', 'HomeController@userAdmin')->name('userAdmin');
 
 //Cateogry Controllers
 Route::get('/admin/category/allCategories', 'CategoryController@index')->name('allCategories');
