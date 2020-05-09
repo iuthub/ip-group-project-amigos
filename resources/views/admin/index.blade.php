@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('content')
-<<<<<<< HEAD
 
-<div class="adminPanel">
+
+{{--<div class="adminPanel">
   <img src="images/admin.png"  class="image" style="width:100%">
   <div class="middle">
     <div class="text"><h5><strong>Role:</strong>admin</h5></div>
@@ -11,12 +11,12 @@
      
      <div class="container">
       
-     </div>
-=======
+     </div>--}}
+
   <div class="container mt-5" style="margin-bottom: 200px">
     <h4 class="text-center mt-4">All users</h4>
     <ul class="list-group">
-      @foreach($users as $user)
+      @foreach($errors as $user)
       <li class="list-group-item">
         Name:
           {{$user->name}}
@@ -30,5 +30,5 @@
       @endforeach
     </ul>
   </div>
->>>>>>> f6773ea327a89080dc3c01f34e60332c34d72aa3
+
 @endsection
