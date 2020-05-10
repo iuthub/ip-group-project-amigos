@@ -25,8 +25,8 @@
                         @else
                             <li class="list-group-item">
                                 {{ $order->food_type }}
-                                <a class="float-right ml-2"href="{{ route('adminOrderCancel', ['id' => $order->id]) }}">Cancel</a>
-                                <a href="{{ route('delivered', ['id' => $order->id]) }}" class="float-right mr-4" href="">Deliver</a>
+                                <a style="color: red" class="float-right ml-2"href="{{ route('adminOrderCancel', ['id' => $order->id]) }}">Cancel</a>
+                                <a style="color: #bb192e" href="{{ route('delivered', ['id' => $order->id]) }}" class="float-right mr-4" href="">Deliver</a>
                             </li>
                         @endif
                     @endforeach

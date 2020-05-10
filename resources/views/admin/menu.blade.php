@@ -24,7 +24,7 @@
 			</div>
 		</div>
 
-		<form action="{{route('adminSearchMenu')}}" method="get">
+		<form  action="{{route('adminSearchMenu')}}" method="get">
 		<div class="search">
 			{{ csrf_field() }}
 			<input class="search_input" type="text" name="search_item" placeholder="Search...">
@@ -37,7 +37,7 @@
 				@include('partials.item')
 			@endforeach
 		</div>
-	<div class="pagination-links">
+	<div style="color: #bb192e" class="pagination-links">
 		{{ $menues->links() }}
 	</div>
 	

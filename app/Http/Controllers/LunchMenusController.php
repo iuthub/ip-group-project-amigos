@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Session\Store;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Redirect;
 
 use App\MenuLunch;
 use App\Category;
@@ -13,7 +14,7 @@ class LunchMenusController extends Controller
     public function getAdminLunch()
     {
 
-        $menues = \DB::table('menu_lunches')->paginate(3);
+        $menues = \DB::table('menu_lunches')->paginate(4);
 		return view('admin.menu',[
             'menues' => $menues,
 		]);
@@ -21,7 +22,7 @@ class LunchMenusController extends Controller
 
     public function getUserLunch()
     {
-        $menues = \DB::table('menu_lunches')->paginate(3);
+        $menues = \DB::table('menu_lunches')->paginate(4);
         return view('menu.menu',[
             'menues' => $menues
         ]);
@@ -143,6 +144,13 @@ class LunchMenusController extends Controller
 
         public function userSearch(Request $request)
     {
+        // $search_item =  isset($_GET['search_item']) ? $_GET['search_item'] : null;
+        // $menu = \DB::table('menu_lunches');
+        // $menu->where('menu_lunches.food_name', 'LIKE', '%' .$search_item. '%' );
+        // $menu = $menu->get();
+        // return view('menu.found_items', compact('menu'));
+
+        // ,['menu' => $menu]
         $search_item = isset($_GET['search_item']) ? $_GET['search_item'] : null;
         $menus = \DB::table('menu_lunches');
         $menus->where('menu_lunches.food_name', 'LIKE', '%' .$search_item. '%', );

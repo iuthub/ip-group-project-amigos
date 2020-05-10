@@ -10,6 +10,7 @@
 	<link rel="icon" href="{{ asset('logo/logo_nav.png') }}" type="image/gif" sizes="16x16">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<script src="{{ asset('js/slideshow.js') }}" defer></script>
+	
 	<title>Amigos</title>
 </head>
 <body>
