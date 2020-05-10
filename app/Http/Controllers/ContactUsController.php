@@ -22,11 +22,11 @@ class ContactUsController extends Controller
     public function store(Request $req)
 
     {
-        $this->validate( $req, [
-            'firstname' => 'required|min:1',
-            'lastname' => 'required|min:3',
-            'email' => 'required|email',
-            'feedback '=> 'required|'
+        $req->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'email' => 'required',
+            'feedback '=> 'required'
         ]);
 
         
